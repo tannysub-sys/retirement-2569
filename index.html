@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ลงทะเบียนมุฑิตาจิต เกษียณอายุราชการ 2569</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #88D498;
+            --secondary-color: #C6E2FF;
+            --accent-color: #FFD166;
+            --bg-color: #F4F9F5;
+            --text-color: #2F3E46;
+        }
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(136, 212, 152, 0.2);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .header h1 {
+            color: #2D6A4F;
+            margin-bottom: 5px;
+            font-size: 24px;
+        }
+        .event-info {
+            background: var(--secondary-color);
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        input[type="text"], select, input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-family: 'Sarabun', sans-serif;
+        }
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            background: #fafafa;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+        .radio-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+        .bank-info {
+            background: #FFF3B0;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: 600;
+        }
+        button {
+            background-color: #52B788;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #40916C;
+        }
+        .admin-section {
+            margin-top: 40px;
+            border-top: 2px dashed #ddd;
+            padding-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>🌿 งานมุฑิตาจิต เกษียณอายุราชการ 2569 🌍</h1>
+        <p>ฝ่ายสาธารณสุขและสิ่งแวดล้อม</p>
+    </div>
+
+    <div class="event-info">
+        📅 <strong>วันที่:</strong> 7 พฤศจิกายน 2569 | ⏰ <strong>เวลา:</strong> 11.00 น. เป็นต้นไป<br>
+        📍 <strong>สถานที่:</strong> สวนอาหารเดอะการ์เด้น<br>
+        ⏳ <strong>ปิดรับลงทะเบียน:</strong> 31 ตุลาคม 2569
+    </div>
+
+    <form id="regForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+            <label>ชื่อ - สกุล:</label>
+            <input type="text" id="fullname" required placeholder="เช่น นายรัก์ษา สิ่งแวดล้อม">
+        </div>
+
+        <div class="form-group">
+            <label>ชื่อเล่น:</label>
+            <input type="text" id="nickname" required placeholder="เช่น เอ">
+        </div>
+
+        <div class="form-group">
+            <label>ที่ทำงาน / หน่วยงาน:</label>
+            <input type="text" id="workplace" required placeholder="เช่น เทศบาล...">
+        </div>
+
+        <div class="form-group">
+            <label>ตำแหน่งและอัตราค่าลงทะเบียน:</label>
+            <div class="radio-group">
+                <label class="radio-item">
+                    <input type="radio" name="position" value="ผู้อำนวยการกองหรือสูงกว่า (800 บาท)" required> 
+                    ผู้อำนวยการกองหรือสูงกว่า (800 บาท)
+                </label>
+                <label class="radio-item">
+                    <input type="radio" name="position" value="หัวหน้าฝ่าย (500 บาท)"> 
+                    หัวหน้าฝ่าย (500 บาท)
+                </label>
+                <label class="radio-item">
+                    <input type="radio" name="position" value="วิชาการ/ปฏิบัติงาน และทีมงาน (300 บาท)"> 
+                    วิชาการ/ปฏิบัติงาน และทีมงาน (300 บาท)
+                </label>
+            </div>
+        </div>
+
+        <div class="bank-info">
+            💳 โอนเงินผ่านบัญชีพร้อมเพย์: <strong>**********</strong><br>
+            ชื่อบัญชี: <strong>นายศุภชัย อธิมา</strong>
+        </div>
+
+        <div class="form-group">
+            <label>อัพโหลดไฟล์รูปสลิปโอนเงิน:</label>
+            <input type="file" id="slip" accept="image/*" required>
+        </div>
+
+        <button type="submit">ยืนยันการลงทะเบียน</button>
+    </form>
+
+    <div class="admin-section">
+        <h3>📋 ตารางสรุปรายชื่อผู้ลงทะเบียน (มุมมองผู้ดูแลระบบ)</h3>
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>ชื่อ-สกุล</th>
+                    <th>ชื่อเล่น</th>
+                    <th>ที่ทำงาน</th>
+                    <th>ตำแหน่ง/เรทเงิน</th>
+                    <th>สลิป</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- ข้อมูลจำลอง -->
+                <tr>
+                    <td>นางสาวรักษ์โลก ดีงาม</td>
+                    <td>ฟ้า</td>
+                    <td>กองสาธารณสุขฯ</td>
+                    <td>วิชาการ/ปฏิบัติงานฯ (300 บาท)</td>
+                    <td><a href="#" target="_blank">ดูสลิป</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        
+        const fullname = document.getElementById('fullname').value;
+        const nickname = document.getElementById('nickname').value;
+        const workplace = document.getElementById('workplace').value;
+        const position = document.querySelector('input[name="position"]:checked').value;
+        const slip = document.getElementById('slip').files[0] ? document.getElementById('slip').files[0].name : 'ไม่มีไฟล์';
+
+        const table = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
+        const newRow = table.insertRow();
+
+        newRow.innerHTML = `
+            <td>${fullname}</td>
+            <td>${nickname}</td>
+            <td>${workplace}</td>
+            <td>${position}</td>
+            <td><a href="#" onclick="alert('ไฟล์สลิป: ${slip}')">ดูสลิป</a></td>
+        `;
+
+        alert('ลงทะเบียนสำเร็จเรียบร้อยแล้วครับ!');
+        document.getElementById('regForm').reset();
+    }
+</script>
+
+</body>
+</html>
